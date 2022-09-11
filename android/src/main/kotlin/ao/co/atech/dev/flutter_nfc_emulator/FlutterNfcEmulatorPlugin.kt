@@ -79,17 +79,13 @@ class FlutterNfcEmulatorPlugin: FlutterPlugin, ActivityAware, MethodCallHandler 
         val text = call.argument<String>("text")
         if (text == null || TextUtils.isEmpty(text)) {
           result.error("no_text", "NFC emulator text cannot be null or empty.", null)
-          return
         } else {
           startNfcEmulator(text);
           result.success(null)
         }
       } else {
         result.error("unavailable", "NFC is not available for device.", null)
-        return
       }
-
-      result.success(null)
     }
   }
 

@@ -1,9 +1,8 @@
+import 'package:flutter_nfc_emulator/types.dart';
+
 import 'flutter_nfc_emulator_platform_interface.dart';
 
 enum NfcStatus { unknown, enabled, notSupported, notEnabled }
-
-// Signature for `FlutterNfcEmulator.startNfcEmulator` onReadEmulatorFinished callback.
-typedef NfcReadEmulatorCallback = void Function(dynamic response);
 
 class FlutterNfcEmulator {
   /*
